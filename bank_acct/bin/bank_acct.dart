@@ -20,8 +20,12 @@ class BankMgr {
   }
 
   void withdrawMoney({required double amount}) {
-    balance -= amount;
-    history.add({'Withdraw': amount});
+    if (balance - amount >= 0) {
+      balance -= amount;
+      history.add({'Withdraw': amount});
+    } else {
+      print('Insufficient Funds!');
+    }
   }
 
   void showCurrentBalance() => print(balance);
