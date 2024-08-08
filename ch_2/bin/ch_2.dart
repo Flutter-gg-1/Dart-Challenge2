@@ -1,7 +1,4 @@
 import 'dart:io';
-
-import 'package:ch_2/ch_2.dart' as ch_2;
-
 void main(List<String> arguments) {
   BankAccount fahad = BankAccount();
 
