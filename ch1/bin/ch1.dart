@@ -16,9 +16,6 @@ class BankAccount {
 void main(List<String> args) {
   int input = int.parse(stdin.readLineSync()!);
   try {
-    if (input < 0) {
-      throw Exception('invalid input');
-    }
     print('Input: $input');
     BankAccount account = BankAccount();
     print('Deposit: ${account.deposit(input.toDouble())}');
