@@ -6,7 +6,11 @@ class BankAccount {
   }
 
   withdraw(double x) {
-    balance -= x;
+    if (x > balance) {
+      print("Please choose less than this number");
+    } else {
+      balance -= x;
+    }
   }
 
   printBalance() {
